@@ -3,71 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVERLOG – Donde las palabras crecen contigo</title>
+  <title>DIVERLOG | Donde las palabras crecen contigo</title>
   <style>
-    body { font-family: 'Arial', sans-serif; margin: 0; background: #f9fafb; color: #333; }
-    header { background: #2980b9; color: white; text-align: center; padding: 2rem 1rem; }
-    nav { background: #3498db; padding: 0.5rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; max-width: 900px; margin: auto; background: white; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 0.3rem; }
-    footer { background: #2980b9; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    :root {
+      --azul: #2c7be5;
+      --verde: #3cc47c;
+      --gris: #f5f7fa;
+      --texto: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--gris);
+      color: var(--texto);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--verde));
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.8rem 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--verde);
+    }
+
+    section {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 1000px;
+    }
+
+    h2 {
+      color: var(--azul);
+      border-left: 5px solid var(--verde);
+      padding-left: 10px;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      border: none;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .boton {
+      display: inline-block;
+      background: var(--azul);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background: var(--verde);
+    }
+
+    footer {
+      background: var(--azul);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .video iframe { height: 250px; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>DIVERLOG</h1>
-  <p>“Donde las palabras crecen contigo”</p>
-</header>
+  <header>
+    <h1>DIVERLOG</h1>
+    <p>“Donde las palabras crecen contigo”</p>
+  </header>
 
-<nav>
-  <a href="#introduccion">Inicio</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#equipo">Equipo</a>
-  <a href="#programas">Programas</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+  <nav>
+    <a href="#mision">Misión y Visión</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#programas">Programas</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#evaluacion">Evaluación</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-<section id="introduccion">
-  <h2>Introducción</h2>
-  <p><strong>DIVERLOG</strong> es un gabinete de logopedia y atención a la diversidad funcional ubicado en San Cristóbal de La Laguna. Su misión es ofrecer un entorno accesible, profesional y cercano que potencie la comunicación, la inclusión y la autonomía personal de cada usuario.</p>
-</section>
+  <section id="mision">
+    <h2>Misión, Visión y Valores</h2>
+    <p><strong>DIVERLOG</strong> es un gabinete logopédico inclusivo dedicado a la atención de personas con diversidad funcional. Nuestra misión es ofrecer una atención personalizada, empática y profesional que promueva la comunicación, la autonomía y la inclusión en todos los ámbitos de la vida.</p>
+    <p>Creemos en el potencial de cada persona y en la importancia de un entorno accesible, afectivo y estimulante. Trabajamos desde una visión interdisciplinar y centrada en la persona, fomentando la colaboración entre profesionales, familias y comunidad educativa.</p>
+  </section>
 
-<section id="servicios">
-  <h2>Servicios</h2>
-  <ul>
-    <li><strong>Intervención logopédica individualizada:</strong> atención personalizada para mejorar la comunicación, el habla y la deglución.</li>
-    <li><strong>Terapias grupales:</strong> fomento de la interacción social y la expresión emocional.</li>
-    <li><strong>Sala multisensorial:</strong> estimulación sensorial para la autorregulación y la comunicación no verbal.</li>
-    <li><strong>Taller ComunicArte:</strong> integración del arte como medio de expresión y desarrollo emocional.</li>
-    <li><strong>Programa Familia Comunicadora:</strong> formación y apoyo a familias.</li>
-    <li><strong>Programa Crecer y Conectar:</strong> espacio educativo y terapéutico para la autonomía personal.</li>
-    <li><strong>Terapia asistida con animales:</strong> equinoterapia y terapia canina en colaboración con asociaciones.</li>
-    <li><strong>Gabinete itinerante:</strong> atención a domicilio, centros educativos y residencias.</li>
-  </ul>
-</section>
+  <section id="servicios">
+    <h2>Servicios Principales</h2>
+    <ul>
+      <li>🔹 Intervención logopédica individualizada</li>
+      <li>🔹 Terapias grupales</li>
+      <li>🔹 Sala multisensorial</li>
+      <li>🔹 Taller <em>“ComunicArte”</em></li>
+      <li>🔹 Programa Familia Comunicadora</li>
+      <li>🔹 Programa “Crecer y Conectar”</li>
+      <li>🔹 Terapia asistida con animales</li>
+      <li>🔹 Gabinete itinerante</li>
+    </ul>
+  </section>
 
-<section id="equipo">
-  <h2>Equipo Profesional</h2>
-  <p>El gabinete está conformado por un <strong>equipo multidisciplinar</strong> de logopedas, fisioterapeutas, psicólogos y terapeutas ocupacionales, comprometidos con un enfoque biopsicosocial y centrado en la persona.</p>
-</section>
+  <section id="programas">
+    <h2>Programas e Innovaciones</h2>
+    <p>En colaboración con entidades locales, ofrecemos programas inclusivos y terapéuticos adaptados a cada necesidad:</p>
+    <ul>
+      <li>🤝 Convenio con SINPROMI: talleres sobre comunicación inclusiva y autonomía personal.</li>
+      <li>🐎 Equinoterapia con el Club Hípico Nueva Atalaya.</li>
+      <li>🐾 Terapias asistidas con animales en el Albergue Valle Colino.</li>
+      <li>🧘‍♀️ Yoga terapéutico con el Centro Kumuda Multidisciplinar.</li>
+      <li>🎭 Musicoterapia y expresión corporal con la Escuela de Actores de Canarias.</li>
+    </ul>
+  </section>
 
-<section id="programas">
-  <h2>Innovación y Convenios</h2>
-  <p>El gabinete colabora con entidades como <strong>SINPROMI</strong>, el <strong>Club Hípico Nueva Atalaya</strong>, el <strong>Albergue Valle Colino</strong>, el <strong>Centro Kumuda</strong> y la <strong>Escuela de Actores de Canarias</strong> para promover la inclusión y el bienestar integral.</p>
-</section>
+  <section id="equipo">
+    <h2>Nuestro Equipo</h2>
+    <p>Contamos con un equipo multidisciplinar formado por:</p>
+    <ul>
+      <li>👩‍⚕️ Logopedas especializados en comunicación y lenguaje.</li>
+      <li>🧠 Psicólogos/as y neuropsicólogos/as de apoyo.</li>
+      <li>💪 Fisioterapeutas y terapeutas ocupacionales.</li>
+      <li>🤝 Cuidadores y voluntarios que acompañan el proceso diario.</li>
+    </ul>
+  </section>
 
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>📍 Calle Alfredo Torre Edwards, 7, 38202, San Cristóbal de La Laguna<br>
-  📧 <a href="mailto:info@diverlog.com">info@diverlog.com</a><br>
-  📞 Teléfono: +34 600 000 000</p>
-</section>
+  <section id="evaluacion">
+    <h2>Evaluación y Seguimiento</h2>
+    <p>Realizamos una evaluación inicial exhaustiva, seguida de planes individualizados de intervención. Además, se aplican cuestionarios de satisfacción familiar para mejorar continuamente nuestros servicios, garantizando la calidad y el bienestar de nuestros usuarios y sus familias.</p>
+  </section>
 
-<footer>
-  <p>© 2025 DIVERLOG – Donde las palabras crecen contigo | Proyecto académico</p>
-</footer>
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="https://placekitten.com/400/250" alt="Sesión logopédica">
+      <img src="https://placebear.com/400/250" alt="Terapia asistida con animales">
+      <img src="https://picsum.photos/400/250?1" alt="Sala multisensorial">
+    </div>
+  </section>
+
+  <section class="video">
+    <h2>Video Institucional</h2>
+    <iframe src="https://www.renderforest.com/watch-109245973?quality=0" allowfullscreen></iframe>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Calle Alfredo Torre Edwards, 7, 38202, San Cristóbal de La Laguna</p>
+    <p>📧 <a href="mailto:info@diverlog.com">info@diverlog.com</a></p>
+    <p>📞 +34 600 000 000</p>
+    <a class="boton" href="mailto:info@diverlog.com">📩 Solicitar información</a>
+  </section>
+
+  <footer>
+    <p>© 2025 DIVERLOG – Donde las palabras crecen contigo | Proyecto académico</p>
+  </footer>
 
 </body>
 </html>
+
