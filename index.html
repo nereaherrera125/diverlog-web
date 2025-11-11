@@ -1,219 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DIVERLOG | Donde las palabras crecen contigo</title>
-  <style>
-    :root {
-      --azul: #2c7be5;
-      --verde: #3cc47c;
-      --gris: #f5f7fa;
-      --texto: #333;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--gris);
-      color: var(--texto);
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--azul), var(--verde));
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-
-    nav {
-      background: white;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      color: var(--azul);
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0.8rem 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--verde);
-    }
-
-    section {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      margin: 2rem auto;
-      padding: 2rem;
-      max-width: 1000px;
-    }
-
-    h2 {
-      color: var(--azul);
-      border-left: 5px solid var(--verde);
-      padding-left: 10px;
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 400px;
-      border-radius: 15px;
-      border: none;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .galeria img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .galeria img:hover {
-      transform: scale(1.05);
-    }
-
-    .boton {
-      display: inline-block;
-      background: var(--azul);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .boton:hover {
-      background: var(--verde);
-    }
-
-    footer {
-      background: var(--azul);
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      .video iframe { height: 250px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>DIVERLOG</h1>
-    <p>“Donde las palabras crecen contigo”</p>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">🌈 DIVERLOG</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="convenios.html">Convenios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h1>“Donde las palabras crecen contigo”</h1>
+      <p>Un gabinete logopédico inclusivo que impulsa la comunicación, la autonomía y la diversidad.</p>
+      <a href="sobre-nosotros.html" class="btn-principal">Conócenos</a>
+    </div>
   </header>
 
-  <nav>
-    <a href="#mision">Misión y Visión</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#programas">Programas</a>
-    <a href="#equipo">Equipo</a>
-    <a href="#evaluacion">Evaluación</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="mision">
-    <h2>Misión, Visión y Valores</h2>
-    <p><strong>DIVERLOG</strong> es un gabinete logopédico inclusivo dedicado a la atención de personas con diversidad funcional. Nuestra misión es ofrecer una atención personalizada, empática y profesional que promueva la comunicación, la autonomía y la inclusión en todos los ámbitos de la vida.</p>
-    <p>Creemos en el potencial de cada persona y en la importancia de un entorno accesible, afectivo y estimulante. Trabajamos desde una visión interdisciplinar y centrada en la persona, fomentando la colaboración entre profesionales, familias y comunidad educativa.</p>
+  <section class="intro">
+    <h2>Bienvenidos a DIVERLOG</h2>
+    <p>DIVERLOG es un gabinete multidisciplinar dedicado a la atención integral de personas con diversidad funcional. Desde un enfoque humano y científico, ofrecemos servicios de logopedia, terapia ocupacional, psicología y fisioterapia.</p>
   </section>
 
-  <section id="servicios">
-    <h2>Servicios Principales</h2>
-    <ul>
-      <li>🔹 Intervención logopédica individualizada</li>
-      <li>🔹 Terapias grupales</li>
-      <li>🔹 Sala multisensorial</li>
-      <li>🔹 Taller <em>“ComunicArte”</em></li>
-      <li>🔹 Programa Familia Comunicadora</li>
-      <li>🔹 Programa “Crecer y Conectar”</li>
-      <li>🔹 Terapia asistida con animales</li>
-      <li>🔹 Gabinete itinerante</li>
-    </ul>
-  </section>
-
-  <section id="programas">
-    <h2>Programas e Innovaciones</h2>
-    <p>En colaboración con entidades locales, ofrecemos programas inclusivos y terapéuticos adaptados a cada necesidad:</p>
-    <ul>
-      <li>🤝 Convenio con SINPROMI: talleres sobre comunicación inclusiva y autonomía personal.</li>
-      <li>🐎 Equinoterapia con el Club Hípico Nueva Atalaya.</li>
-      <li>🐾 Terapias asistidas con animales en el Albergue Valle Colino.</li>
-      <li>🧘‍♀️ Yoga terapéutico con el Centro Kumuda Multidisciplinar.</li>
-      <li>🎭 Musicoterapia y expresión corporal con la Escuela de Actores de Canarias.</li>
-    </ul>
-  </section>
-
-  <section id="equipo">
-    <h2>Nuestro Equipo</h2>
-    <p>Contamos con un equipo multidisciplinar formado por:</p>
-    <ul>
-      <li>👩‍⚕️ Logopedas especializados en comunicación y lenguaje.</li>
-      <li>🧠 Psicólogos/as y neuropsicólogos/as de apoyo.</li>
-      <li>💪 Fisioterapeutas y terapeutas ocupacionales.</li>
-      <li>🤝 Cuidadores y voluntarios que acompañan el proceso diario.</li>
-    </ul>
-  </section>
-
-  <section id="evaluacion">
-    <h2>Evaluación y Seguimiento</h2>
-    <p>Realizamos una evaluación inicial exhaustiva, seguida de planes individualizados de intervención. Además, se aplican cuestionarios de satisfacción familiar para mejorar continuamente nuestros servicios, garantizando la calidad y el bienestar de nuestros usuarios y sus familias.</p>
-  </section>
-
-  <section id="galeria">
-    <h2>Galería</h2>
-    <div class="galeria">
-      <img src="https://placekitten.com/400/250" alt="Sesión logopédica">
-      <img src="https://placebear.com/400/250" alt="Terapia asistida con animales">
-      <img src="https://picsum.photos/400/250?1" alt="Sala multisensorial">
+  <section class="destacados">
+    <div class="card" style="--color:#2ecc71">
+      <h3>🗣️ Comunicación</h3>
+      <p>Fortalecemos las habilidades comunicativas, lingüísticas y sociales.</p>
+    </div>
+    <div class="card" style="--color:#e74c3c">
+      <h3>🎨 Expresión</h3>
+      <p>Integramos arte, música y movimiento como herramientas terapéuticas.</p>
+    </div>
+    <div class="card" style="--color:#f1c40f">
+      <h3>🤝 Inclusión</h3>
+      <p>Promovemos la inclusión educativa y social desde la diversidad.</p>
+    </div>
+    <div class="card" style="--color:#3498db">
+      <h3>🐾 Innovación</h3>
+      <p>Aplicamos terapias asistidas con animales y tecnologías emergentes.</p>
     </div>
   </section>
 
-  <section class="video">
-    <h2>Video Institucional</h2>
+  <section class="video-section">
+    <h2>Conoce nuestro trabajo</h2>
     <iframe src="https://www.renderforest.com/watch-109245973?quality=0" allowfullscreen></iframe>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Calle Alfredo Torre Edwards, 7, 38202, San Cristóbal de La Laguna</p>
-    <p>📧 <a href="mailto:info@diverlog.com">info@diverlog.com</a></p>
-    <p>📞 +34 600 000 000</p>
-    <a class="boton" href="mailto:info@diverlog.com">📩 Solicitar información</a>
-  </section>
-
   <footer>
-    <p>© 2025 DIVERLOG – Donde las palabras crecen contigo | Proyecto académico</p>
+    <p>© 2025 DIVERLOG | Donde las palabras crecen contigo</p>
   </footer>
 
 </body>
 </html>
-
