@@ -5,9 +5,4 @@ diverlog-pro/
 ├── servicios.html
 ├── convenios.html
 ├── contacto.html
-├── style.css
-└── img/
-    ├── logo.png
-    ├── equipo.jpg
-    ├── multisensorial.jpg
-    └── animales.jpg
+└── style.css
